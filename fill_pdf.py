@@ -1,5 +1,6 @@
+from test_data import DATA_SA100_TR1, DATA_SA100_TR2
+from form_mappings import SA100_TR1, SA100_TR2
 import os
-import sys
 import io
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
@@ -89,160 +90,66 @@ def merge_pdfs(template_path, overlay_packet, output_path):
     print(f"Successfully created: {output_path}")
 
 
-FIELD_MAPPING = {
-    'utr_number': {
-        'x': 91,
-        'y': 735,
-        'type': 'text'
-    },
-    'nino': {
-        'x': 91,
-        'y': 722,
-        'type': 'text'
-    },
-    'Employerreference': {
-        'x': 148,
-        'y': 710,
-        'type': 'text'
-    },
-    'date': {
-        'x': 148,
-        'y': 688,
-        'type': 'text'
-    },
-    'dateofbirthday': {
-        'x': 68,
-        'y': 134,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'dateofbirthmonth': {
-        'x': 106,
-        'y': 134,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'dateofbirthyear': {
-        'x': 142,
-        'y': 134,
-        'type': 'boxed',
-        'box_width': 15,
-        'spacing': 1
-    },
-    'phonenumber': {
-        'x': 323,
-        'y': 146,
-        'type': 'boxed',
-        'box_width': 15 ,
-        'spacing': 1
-    },
-     'dateofbirthday2': {
-        'x': 70,
-        'y': 47,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'dateofbirthmonth2': {
-        'x': 106,
-        'y': 47,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'dateofbirthyear2': {
-        'x': 142,
-        'y': 47,
-        'type': 'boxed',
-        'box_width': 15,
-        'spacing': 1
-    },
-    'NationalInsuranceNumber1': {
-        'x': 326,
-        'y': 85,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'NationalInsuranceNumber2': {
-        'x': 364,
-        'y': 85,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'NationalInsuranceNumber3': {
-        'x': 398,
-        'y': 85,
-        'type': 'boxed',
-        'box_width': 15,
-        'spacing': 1
-    },
-    'NationalInsuranceNumber4': {
-        'x': 442,
-        'y': 85,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-    'NationalInsuranceNumber5': {
-        'x': 480,
-        'y': 85,
-        'type': 'boxed',
-        'box_width': 12,
-        'spacing': 1
-    },
-}
-
-# 2. Define the data to populate
-DUMMY_DATA = {
-    'utr_number': "1234567890",
-    'nino': "AB123CD",
-    'Employerreference': "1234567890",
-    'date': "12122022",
-    'dateofbirthday': "12",
-    'dateofbirthmonth': "12",
-    'dateofbirthyear': "2022",
-    'phonenumber': "1234567890000",
-    'dateofbirthday2': "12",
-    'dateofbirthmonth2': "12",
-    'dateofbirthyear2': "2022",
-    'NationalInsuranceNumber1': "00",
-    'NationalInsuranceNumber2': "00",
-    'NationalInsuranceNumber3': "00",
-    'NationalInsuranceNumber4': "00",
-    'NationalInsuranceNumber5': "0"
-}
+# ==========================================
+# CONFIGURATION
+# ==========================================
+# Select which form to process
+# You can change this to SA100_TR2 etc later
+ACTIVE_MAPPING = SA100_TR1
+ACTIVE_DATA = DATA_SA100_TR1
 
 
 # ==========================================
-# FILE CONFIGURATION
+# BATCH CONFIGURATION
 # ==========================================
-# REPLACE THESE WITH YOUR FILENAMES
-TEMPLATE_FILE = "tax_return_template.pdf"  # Default
-OUTPUT_FILE = "filled_tax_return.pdf"      # Default
+
+# List of (Template, Mapping, Data)
+# Add your other pages here:
+BATCH_CONFIG = [
+    ("sa100_removed.pdf", SA100_TR1, DATA_SA100_TR1),
+    # Ensure 'tr2.pdf' exists in folder
+    ("sa100_tr2.pdf", SA100_TR2, DATA_SA100_TR2),
+]
+
+OUTPUT_FILENAME = "final_completed_return.pdf"
 
 if __name__ == "__main__":
-    # Support command line args: python fill_pdf.py [input_pdf] [output_pdf]
-    template_path = TEMPLATE_FILE
-    output_path = OUTPUT_FILE
+    # PdfMerger is deprecated/removed in some versions, use PdfWriter
+    from pypdf import PdfWriter
 
-    if len(sys.argv) > 1:
-        template_path = sys.argv[1]
-        # Construct output name based on input if not provided
-        base_name = os.path.splitext(template_path)[0]
-        output_path = f"filled_{base_name}.pdf"
+    print(f"Starting batch process...")
+    # This writer will hold the final combined document
+    final_writer = PdfWriter()
+    temp_files = []
 
-    if len(sys.argv) > 2:
-        output_path = sys.argv[2]
+    for index, (template, mapping, data) in enumerate(BATCH_CONFIG):
+        if not os.path.exists(template):
+            print(f"Skipping {template} (not found)")
+            continue
 
-    print(f"Using template: {template_path}")
-    print(f"Output file: {output_path}")
+        temp_output = f"temp_page_{index+1}.pdf"
+        print(f"Processing Page {index+1}: {template} -> {temp_output}")
 
-    if not os.path.exists(template_path):
-        print(f"Error: Template file '{template_path}' not found.")
-    else:
-        overlay_pdf = create_overlay(DUMMY_DATA, FIELD_MAPPING, "overlay.pdf")
-        merge_pdfs(template_path, overlay_pdf, output_path)
+        # Create overlay
+        overlay = create_overlay(data, mapping, "overlay.pdf")
+
+        # Merge overlay with template to create a single page/doc
+        # We reuse the existing logic but save to temp file
+        merge_pdfs(template, overlay, temp_output)
+
+        # Add the page(s) from this temp file to our final writer
+        reader = PdfReader(temp_output)
+        for page in reader.pages:
+            final_writer.add_page(page)
+
+        temp_files.append(temp_output)
+
+    # Write final output
+    with open(OUTPUT_FILENAME, "wb") as f_out:
+        final_writer.write(f_out)
+
+    # Cleanup temp files (optional - comment out if you want to keep them)
+    # for f in temp_files:
+    #     os.remove(f)
+
+    print(f"\nTotal Success! Verification: {OUTPUT_FILENAME}")
