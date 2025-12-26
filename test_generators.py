@@ -3,7 +3,7 @@ Main Test Script
 Tests both SA100 and SA102 form generation
 """
 
-from forms.sa102.test_data import DATA_SA102_P1
+from forms.sa102.test_data import DATA_SA102_TR1, DATA_SA102_TR2
 from forms.sa102.generator import generate_sa102
 from forms.sa100.test_data import (
     DATA_SA100_TR1, DATA_SA100_TR2, DATA_SA100_TR3,
@@ -54,7 +54,8 @@ def test_sa102():
 
     # Prepare data dictionary
     data = {
-        'p1': DATA_SA102_P1,
+        'tr1': DATA_SA102_TR1,
+        'tr2': DATA_SA102_TR2,
     }
 
     try:
