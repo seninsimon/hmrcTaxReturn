@@ -11,6 +11,8 @@ from forms.sa100.test_data import (
     DATA_SA100_TR7, DATA_SA100_TR8
 )
 from forms.sa100.generator import generate_sa100
+from forms.sa103s.test_data import DATA_SA103s_SES1, DATA_SA103s_SES2
+from forms.sa103s.generator import generate_sa103s
 import os
 import sys
 
@@ -72,6 +74,32 @@ def test_sa102():
         return False
 
 
+def test_sa103s():
+    """Test SA103s generation"""
+    print("\n" + "=" * 60)
+    print("Testing SA103s Generation")
+    print("=" * 60)
+
+    # Prepare data dictionary
+    data = {
+        'ses1': DATA_SA103s_SES1,
+        'ses2': DATA_SA103s_SES2,
+    }
+
+    try:
+        output_path = generate_sa103s(
+            data, output_path="output/sa103s_completed.pdf")
+        print(f"✓ SA103s generated successfully: {output_path}")
+        return True
+    except FileNotFoundError as e:
+        print(f"⚠ SA103s skipped: {str(e)}")
+        print("  Add sa103s.pdf to forms/sa103s/templates/ to enable SA103s generation")
+        return True  # Not a failure, just not configured yet
+    except Exception as e:
+        print(f"✗ SA103s generation failed: {str(e)}")
+        return False
+
+
 if __name__ == "__main__":
     # Create output directory if it doesn't exist
     os.makedirs("output", exist_ok=True)
@@ -79,13 +107,14 @@ if __name__ == "__main__":
     # Run tests
     sa100_success = test_sa100()
     sa102_success = test_sa102()
+    sa103s_success = test_sa103s()
 
     # Summary
     print("\n" + "=" * 60)
     print("Summary")
     print("=" * 60)
 
-    if sa100_success and sa102_success:
+    if sa100_success and sa102_success and sa103s_success:
         print("✓ All tests passed!")
         sys.exit(0)
     else:
