@@ -1,5 +1,5 @@
-from test_data import DATA_SA100_TR1, DATA_SA100_TR2
-from form_mappings import SA100_TR1, SA100_TR2
+from test_data import DATA_SA100_TR1, DATA_SA100_TR2, DATA_SA100_TR3, DATA_SA100_TR4, DATA_SA100_TR5, DATA_SA100_TR6, DATA_SA100_TR7, DATA_SA100_TR8
+from form_mappings import SA100_TR1, SA100_TR2, SA100_TR3, SA100_TR4, SA100_TR5, SA100_TR6, SA100_TR7, SA100_TR8
 import os
 import io
 from reportlab.pdfgen import canvas
@@ -87,28 +87,16 @@ def merge_pdfs(template_path, overlay_packet, output_path):
     with open(output_path, "wb") as outputStream:
         output.write(outputStream)
 
-    print(f"Successfully created: {output_path}")
 
-
-# ==========================================
-# CONFIGURATION
-# ==========================================
-# Select which form to process
-# You can change this to SA100_TR2 etc later
-ACTIVE_MAPPING = SA100_TR1
-ACTIVE_DATA = DATA_SA100_TR1
-
-
-# ==========================================
-# BATCH CONFIGURATION
-# ==========================================
-
-# List of (Template, Mapping, Data)
-# Add your other pages here:
 BATCH_CONFIG = [
-    ("sa100_removed.pdf", SA100_TR1, DATA_SA100_TR1),
-    # Ensure 'tr2.pdf' exists in folder
+    ("sa100_tr1.pdf", SA100_TR1, DATA_SA100_TR1),
     ("sa100_tr2.pdf", SA100_TR2, DATA_SA100_TR2),
+    ("sa100_tr3.pdf", SA100_TR3, DATA_SA100_TR3),
+    ("sa100_tr4.pdf", SA100_TR4, DATA_SA100_TR4),
+    ("sa100_tr5.pdf", SA100_TR5, DATA_SA100_TR5),
+    ("sa100_tr6.pdf", SA100_TR6, DATA_SA100_TR6),
+    ("sa100_tr7.pdf", SA100_TR7, DATA_SA100_TR7),
+    ("sa100_tr8.pdf", SA100_TR8, DATA_SA100_TR8),
 ]
 
 OUTPUT_FILENAME = "final_completed_return.pdf"
@@ -128,7 +116,6 @@ if __name__ == "__main__":
             continue
 
         temp_output = f"temp_page_{index+1}.pdf"
-        print(f"Processing Page {index+1}: {template} -> {temp_output}")
 
         # Create overlay
         overlay = create_overlay(data, mapping, "overlay.pdf")
@@ -148,8 +135,8 @@ if __name__ == "__main__":
     with open(OUTPUT_FILENAME, "wb") as f_out:
         final_writer.write(f_out)
 
-    # Cleanup temp files (optional - comment out if you want to keep them)
-    # for f in temp_files:
-    #     os.remove(f)
+    # Cleanup temp files
+    for f in temp_files:
+        os.remove(f)
 
     print(f"\nTotal Success! Verification: {OUTPUT_FILENAME}")
