@@ -1,5 +1,5 @@
 
-DATA_SA103s_SES1 = {
+DATA_SA105_UKP1 = {
 
     "Yourname": "John Doe",
     
@@ -149,7 +149,7 @@ DATA_SA103s_SES1 = {
 }
 
 
-DATA_SA103s_SES2 = {
+DATA_SA105_UKP2 = {
 
 
      "Netprofit1":"0",

@@ -1,5 +1,5 @@
 
-SA103s_SES1 = {
+SA105_UKP1 = {
     
     "Yourname": { "x": 71, "y": 685 },
 
@@ -143,7 +143,7 @@ SA103s_SES1 = {
 
 }   
 
-SA103s_SES2 = {
+SA105_UKP2 = {
 
     "Netprofit1": { "x": 84, "y": 748 },
     "Netprofit2": { "x": 102, "y": 748 },
