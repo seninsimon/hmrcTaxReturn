@@ -2,7 +2,7 @@
 DATA_SA105_UKP1 = {
 
     "Yourname": "John Doe",
-    
+
     "utr1":"0",
     "utr2":"0",
     "utr3":"0",
@@ -15,134 +15,178 @@ DATA_SA105_UKP1 = {
     "utr10":"0",
 
 
-    "Descriptionofbusiness":"description",
-
-    "businessstartedafter5April2024day":"10",
-    "businessstartedafter5April2024month":"10",
-    "businessstartedafter5April2024year":"2024",
+    "Numberofpropertiesrentedout1" : "0",
+    "Numberofpropertiesrentedout2" : "0",
 
 
-    "Postcodeofyourbusinessaddress1":"0",
-    "Postcodeofyourbusinessaddress2":"0",
-    "Postcodeofyourbusinessaddress3":"0",
-    "Postcodeofyourbusinessaddress4":"0",
-    "Postcodeofyourbusinessaddress5":"0",
-    "Postcodeofyourbusinessaddress6":"0",
-    "Postcodeofyourbusinessaddress7":"0",
-    "Postcodeofyourbusinessaddress8":"0",
+     "Ifyouhaveanyincomefromproperty":"X",
+
+     "IfyoureclaimingRentarRoomrelief":"X",
+
+     "Ifallpropertyincomeceasedin2024-25":"X",
 
 
-    "businessceasedbefore6April2025day":"10",
-    "businessceasedbefore6April2025month":"10",
-    "businessceasedbefore6April2025year":"2024",
+     "Income1":"0",
+     "Income2":"0",
+     "Income3":"0",
+     "Income4":"0",
+     "Income5":"0",
+     "Income6":"0",
+     "Income7":"0",
+     "Income8":"0",
 
-    "changesinlast12months":"X",
+       "Propertyincomeallowance1":"0",
+       "Propertyincomeallowance2":"0",
+       "Propertyincomeallowance3":"0",
+       "Propertyincomeallowance4":"0",
 
-    "Dateyourbooksoraccountsaremaduptobetween31Marchand5April2024day":"10",
-    "Dateyourbooksoraccountsaremaduptobetween31Marchand5April2024month":"10",
-    "Dateyourbooksoraccountsaremaduptobetween31Marchand5April2024year":"2024",
-
-
-    "Ifyouareafostercarerorsharedlivescarer":"X",
 
     "Ifyouveusedtraditionalaccounting":"X",
 
 
-     "Yourturnover1": "0",
-     "Yourturnover2": "0",
-     "Yourturnover3": "0",
-     "Yourturnover4": "0",
-     "Yourturnover5": "0",
+
+     "Rentpaidrepairsinsuranceandcostsofservices1":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices2":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices3":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices4":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices5":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices6":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices7":"0",
+     "Rentpaidrepairsinsuranceandcostsofservices8":"0",
 
 
-     "Anyotherbusinessincomenotincludedinboxnine1":"0",
-     "Anyotherbusinessincomenotincludedinboxnine2":"0",
-     "Anyotherbusinessincomenotincludedinboxnine3":"0",
-     "Anyotherbusinessincomenotincludedinboxnine4":"0",
-     "Anyotherbusinessincomenotincludedinboxnine5":"0",
+      "Loaninterestandotherfinancialcosts1":"0",
+      "Loaninterestandotherfinancialcosts2":"0",
+      "Loaninterestandotherfinancialcosts3":"0",
+      "Loaninterestandotherfinancialcosts4":"0",
+      "Loaninterestandotherfinancialcosts5":"0",
+      "Loaninterestandotherfinancialcosts6":"0",
+      "Loaninterestandotherfinancialcosts7":"0",
+      "Loaninterestandotherfinancialcosts8":"0",
+
+      "Legalmanagementandotherprofessionalfees1":"0",
+      "Legalmanagementandotherprofessionalfees2":"0",
+      "Legalmanagementandotherprofessionalfees3":"0",
+      "Legalmanagementandotherprofessionalfees4":"0",
+      "Legalmanagementandotherprofessionalfees5":"0",
+      "Legalmanagementandotherprofessionalfees6":"0",
+      "Legalmanagementandotherprofessionalfees7":"0",
+      "Legalmanagementandotherprofessionalfees8":"0",
 
 
-      "Tradingincomeallowance1":"0",
-      "Tradingincomeallowance2":"0",
-      "Tradingincomeallowance3":"0",
-      "Tradingincomeallowance4":"0",
+      "Otherallowablepropertyexpenses1":"0",
+      "Otherallowablepropertyexpenses2":"0",
+      "Otherallowablepropertyexpenses3":"0",
+      "Otherallowablepropertyexpenses4":"0",
+      "Otherallowablepropertyexpenses5":"0",
+      "Otherallowablepropertyexpenses6":"0",
+      "Otherallowablepropertyexpenses7":"0",
+      "Otherallowablepropertyexpenses8":"0",
 
-      "Costsofgoodsboughtforresaleorgoodsused1":"0",
-      "Costsofgoodsboughtforresaleorgoodsused2":"0",
-      "Costsofgoodsboughtforresaleorgoodsused3":"0",
-      "Costsofgoodsboughtforresaleorgoodsused4":"0",
-      "Costsofgoodsboughtforresaleorgoodsused5":"0",
-      "Costsofgoodsboughtforresaleorgoodsused6":"0",
-
-
-       "Carvanandtravelexpenses1":"0",
-       "Carvanandtravelexpenses2":"0",
-       "Carvanandtravelexpenses3":"0",
-       "Carvanandtravelexpenses4":"0",
-       "Carvanandtravelexpenses5":"0",
-       "Carvanandtravelexpenses6":"0",
+      "Privateuseadjustment1":"0",
+      "Privateuseadjustment2":"0",
+      "Privateuseadjustment3":"0",
+      "Privateuseadjustment4":"0",
+      "Privateuseadjustment5":"0",
+      "Privateuseadjustment6":"0",
+      "Privateuseadjustment7":"0",
+      "Privateuseadjustment8":"0",
 
 
-       "Wagessalariesandotherstaffcosts1":"0",
-       "Wagessalariesandotherstaffcosts2":"0",
-       "Wagessalariesandotherstaffcosts3":"0",
-       "Wagessalariesandotherstaffcosts4":"0",
-       "Wagessalariesandotherstaffcosts5":"0",
-       "Wagessalariesandotherstaffcosts6":"0",
+      "Balancingcharges1":"0",
+      "Balancingcharges2":"0",
+      "Balancingcharges3":"0",
+      "Balancingcharges4":"0",
+      "Balancingcharges5":"0",
+      "Balancingcharges6":"0",
+      "Balancingcharges7":"0",
+      "Balancingcharges8":"0",
+
+      "Electricchargepointallowance1":"0",
+      "Electricchargepointallowance2":"0",
+      "Electricchargepointallowance3":"0",
+      "Electricchargepointallowance4":"0",
+      "Electricchargepointallowance5":"0",
+      "Electricchargepointallowance6":"0",
+      "Electricchargepointallowance7":"0",
+      "Electricchargepointallowance8":"0",
 
 
-       "Rentratespowerandinsurancecosts1":"0",
-       "Rentratespowerandinsurancecosts2":"0",
-       "Rentratespowerandinsurancecosts3":"0",
-       "Rentratespowerandinsurancecosts4":"0",
-       "Rentratespowerandinsurancecosts5":"0",
-       "Rentratespowerandinsurancecosts6":"0",
+      "Zero-emissioncarallowance1":"0",
+      "Zero-emissioncarallowance2":"0",
+      "Zero-emissioncarallowance3":"0",
+      "Zero-emissioncarallowance4":"0",
+      "Zero-emissioncarallowance5":"0",
+      "Zero-emissioncarallowance6":"0",
+      "Zero-emissioncarallowance7":"0",
+      "Zero-emissioncarallowance8":"0",
 
 
-       "Repairsandmaintenanceofpropertyandequipment1":"0",
-       "Repairsandmaintenanceofpropertyandequipment2":"0",
-       "Repairsandmaintenanceofpropertyandequipment3":"0",
-       "Repairsandmaintenanceofpropertyandequipment4":"0",
-       "Repairsandmaintenanceofpropertyandequipment5":"0",
-       "Repairsandmaintenanceofpropertyandequipment6":"0",
-
-       "Accountancylegalandotherprofessionalfees1":"0",
-       "Accountancylegalandotherprofessionalfees2":"0",
-       "Accountancylegalandotherprofessionalfees3":"0",
-       "Accountancylegalandotherprofessionalfees4":"0",
-       "Accountancylegalandotherprofessionalfees5":"0",
-       "Accountancylegalandotherprofessionalfees6":"0",
-
-       "Interestandbankandcreditcardfinancialcharges1":"0",
-       "Interestandbankandcreditcardfinancialcharges2":"0",
-       "Interestandbankandcreditcardfinancialcharges3":"0",
-       "Interestandbankandcreditcardfinancialcharges4":"0",
-       "Interestandbankandcreditcardfinancialcharges5":"0",
-       "Interestandbankandcreditcardfinancialcharges6":"0",
+      "Othercapitalallowances1":"0",
+      "Othercapitalallowances2":"0",
+      "Othercapitalallowances3":"0",
+      "Othercapitalallowances4":"0",
+      "Othercapitalallowances5":"0",
+      "Othercapitalallowances6":"0",
+      "Othercapitalallowances7":"0",
+      "Othercapitalallowances8":"0",
 
 
-       "Phonefaxstationeryandotherofficecosts1":"0",
-       "Phonefaxstationeryandotherofficecosts2":"0",
-       "Phonefaxstationeryandotherofficecosts3":"0",
-       "Phonefaxstationeryandotherofficecosts4":"0",
-       "Phonefaxstationeryandotherofficecosts5":"0",
-       "Phonefaxstationeryandotherofficecosts6":"0",
+       "Adjustedprofitfortheyear1":"0",
+       "Adjustedprofitfortheyear2":"0",
+       "Adjustedprofitfortheyear3":"0",
+       "Adjustedprofitfortheyear4":"0",
+       "Adjustedprofitfortheyear5":"0",
+       "Adjustedprofitfortheyear6":"0",
+       "Adjustedprofitfortheyear7":"0",
+       "Adjustedprofitfortheyear8":"0",
 
 
-       "Otherallowablebusinessexpenses1":"0",
-       "Otherallowablebusinessexpenses2":"0",
-       "Otherallowablebusinessexpenses3":"0",
-       "Otherallowablebusinessexpenses4":"0",
-       "Otherallowablebusinessexpenses5":"0",
-       "Otherallowablebusinessexpenses6":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits1":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits2":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits3":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits4":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits5":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits6":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits7":"0",
+        "Lossbroughtforwardusedagainstthisyearsprofits8":"0",
 
 
-       "Totalallowableexpenses1":"0",
-       "Totalallowableexpenses2":"0",
-       "Totalallowableexpenses3":"0",
-       "Totalallowableexpenses4":"0",
-       "Totalallowableexpenses5":"0",
-       "Totalallowableexpenses6":"0",
+         "Taxableprofitfortheyear1":"0",
+         "Taxableprofitfortheyear2":"0",
+         "Taxableprofitfortheyear3":"0",
+         "Taxableprofitfortheyear4":"0",
+         "Taxableprofitfortheyear5":"0",
+         "Taxableprofitfortheyear6":"0",
+         "Taxableprofitfortheyear7":"0",
+         "Taxableprofitfortheyear8":"0",
+
+
+           "Lossfortheyear1":"0",
+           "Lossfortheyear2":"0",
+           "Lossfortheyear3":"0",
+           "Lossfortheyear4":"0",
+           "Lossfortheyear5":"0",
+           "Lossfortheyear6":"0",
+           "Lossfortheyear7":"0",
+           "Lossfortheyear8":"0",
+
+
+            "Totallosstocarryforward1":"0",
+            "Totallosstocarryforward2":"0",
+            "Totallosstocarryforward3":"0",
+            "Totallosstocarryforward4":"0",
+            "Totallosstocarryforward5":"0",
+            "Totallosstocarryforward6":"0",
+            "Totallosstocarryforward7":"0",
+            "Totallosstocarryforward8":"0",
+
+
+        "IfthisbusinessisintheEEA":"X",
+
+          "Ifyouwanttomakeaperiodofgrace":"X",
+ 
+
     
 
 
@@ -153,149 +197,7 @@ DATA_SA105_UKP2 = {
 
 
      "Netprofit1":"0",
-     "Netprofit2":"0",
-     "Netprofit3":"0",
-     "Netprofit4":"0",
-     "Netprofit5":"0",
-     "Netprofit6":"0",
-
-
-     "AnnualInvestmentAllowance1":"0",
-     "AnnualInvestmentAllowance2":"0",
-     "AnnualInvestmentAllowance3":"0",
-     "AnnualInvestmentAllowance4":"0",
-     "AnnualInvestmentAllowance5":"0",
-     "AnnualInvestmentAllowance6":"0",
-
-     "Allowanceforsmallbalanceofunrelievedexpenditure1":"0",
-     "Allowanceforsmallbalanceofunrelievedexpenditure2":"0",
-     "Allowanceforsmallbalanceofunrelievedexpenditure3":"0",
-     "Allowanceforsmallbalanceofunrelievedexpenditure4":"0",
-     "Allowanceforsmallbalanceofunrelievedexpenditure5":"0",
-     "Allowanceforsmallbalanceofunrelievedexpenditure6":"0",
-
-     "Zeroemissioncarallowance1":"0",
-     "Zeroemissioncarallowance2":"0",
-     "Zeroemissioncarallowance3":"0",
-     "Zeroemissioncarallowance4":"0",
-     "Zeroemissioncarallowance5":"0",
-     "Zeroemissioncarallowance6":"0",
-
-     "Othercapitalallowances1":"0",
-     "Othercapitalallowances2":"0",
-     "Othercapitalallowances3":"0",
-     "Othercapitalallowances4":"0",
-     "Othercapitalallowances5":"0",
-     "Othercapitalallowances6":"0",
-
-     "Goodsandorservicesforyourownuse1":"0",
-     "Goodsandorservicesforyourownuse2":"0",
-     "Goodsandorservicesforyourownuse3":"0",
-     "Goodsandorservicesforyourownuse4":"0",
-     "Goodsandorservicesforyourownuse5":"0",
-     "Goodsandorservicesforyourownuse6":"0",
-
-     "Totalallowablecapitalallowances1":"0",
-     "Totalallowablecapitalallowances2":"0",
-     "Totalallowablecapitalallowances3":"0",
-     "Totalallowablecapitalallowances4":"0",
-     "Totalallowablecapitalallowances5":"0",
-     "Totalallowablecapitalallowances6":"0",
-
-     "Totaltaxableprofitfromthisbusiness1":"0",
-     "Totaltaxableprofitfromthisbusiness2":"0",
-     "Totaltaxableprofitfromthisbusiness3":"0",
-     "Totaltaxableprofitfromthisbusiness4":"0",
-     "Totaltaxableprofitfromthisbusiness5":"0",
-     "Totaltaxableprofitfromthisbusiness6":"0",
-
-      "Lossfromthistaxyearsetoffagainstotherincome1":"0",
-      "Lossfromthistaxyearsetoffagainstotherincome2":"0",
-      "Lossfromthistaxyearsetoffagainstotherincome3":"0",
-      "Lossfromthistaxyearsetoffagainstotherincome4":"0",
-      "Lossfromthistaxyearsetoffagainstotherincome5":"0",
-      "Lossfromthistaxyearsetoffagainstotherincome6":"0",
-
-
-      "Losstobecuecarriedbacktopreviousyears1":"0",
-      "Losstobecuecarriedbacktopreviousyears2":"0",
-      "Losstobecuecarriedbacktopreviousyears3":"0",
-      "Losstobecuecarriedbacktopreviousyears4":"0",
-      "Losstobecuecarriedbacktopreviousyears5":"0",
-      "Losstobecuecarriedbacktopreviousyears6":"0",
-
-
-       "Totallosstocarryforwardafterallothersetoffs1":"0",
-       "Totallosstocarryforwardafterallothersetoffs2":"0",
-       "Totallosstocarryforwardafterallothersetoffs3":"0",
-       "Totallosstocarryforwardafterallothersetoffs4":"0",
-       "Totallosstocarryforwardafterallothersetoffs5":"0",
-       "Totallosstocarryforwardafterallothersetoffs6":"0",
-
-
-       "Ornetloss1":"0",
-       "Ornetloss2":"0",
-       "Ornetloss3":"0",
-       "Ornetloss4":"0",
-       "Ornetloss5":"0",
-       "Ornetloss6":"0",
-
-       "TheStructuresandBuildingsAllowance1":"0",
-       "TheStructuresandBuildingsAllowance2":"0",
-       "TheStructuresandBuildingsAllowance3":"0",
-       "TheStructuresandBuildingsAllowance4":"0",
-       "TheStructuresandBuildingsAllowance5":"0",
-       "TheStructuresandBuildingsAllowance6":"0",
-
-
-       "FreeportandInvestmentZonesStructures1":"0",
-       "FreeportandInvestmentZonesStructures2":"0",
-       "FreeportandInvestmentZonesStructures3":"0",
-       "FreeportandInvestmentZonesStructures4":"0",
-       "FreeportandInvestmentZonesStructures5":"0",
-       "FreeportandInvestmentZonesStructures6":"0",
-
-
-       "Totalbalancingcharges1":"0",
-       "Totalbalancingcharges2":"0",
-       "Totalbalancingcharges3":"0",
-       "Totalbalancingcharges4":"0",
-       "Totalbalancingcharges5":"0",
-       "Totalbalancingcharges6":"0",
-
-
-       "Lossbroughtforwardfromearlieryearssetoff1":"0",
-       "Lossbroughtforwardfromearlieryearssetoff2":"0",
-       "Lossbroughtforwardfromearlieryearssetoff3":"0",
-       "Lossbroughtforwardfromearlieryearssetoff4":"0",
-       "Lossbroughtforwardfromearlieryearssetoff5":"0",
-       "Lossbroughtforwardfromearlieryearssetoff6":"0",
-
-
-        "Anyotherbusinessincomenotincludedinbox1":"0",
-        "Anyotherbusinessincomenotincludedinbox2":"0",
-        "Anyotherbusinessincomenotincludedinbox3":"0",
-        "Anyotherbusinessincomenotincludedinbox4":"0",
-        "Anyotherbusinessincomenotincludedinbox5":"0",
-        "Anyotherbusinessincomenotincludedinbox6":"0",
-
-       "Netbusinesslossfortaxpurposes1":"0",
-       "Netbusinesslossfortaxpurposes2":"0",
-       "Netbusinesslossfortaxpurposes3":"0",
-       "Netbusinesslossfortaxpurposes4":"0",
-       "Netbusinesslossfortaxpurposes5":"0",
-       "Netbusinesslossfortaxpurposes6":"0",
-
-       "Ifyourtotalprofitfor2024–25areless":"X",
-
-       "IfyoureexemptfrompayingClass4NICs":"X",
-
-       "TotalConstructionIndustrySchemeCISdeductions1":"0",
-       "TotalConstructionIndustrySchemeCISdeductions2":"0",
-       "TotalConstructionIndustrySchemeCISdeductions3":"0",
-       "TotalConstructionIndustrySchemeCISdeductions4":"0",
-       "TotalConstructionIndustrySchemeCISdeductions5":"0",
-       "TotalConstructionIndustrySchemeCISdeductions6":"0",
+   
        
 }
 
