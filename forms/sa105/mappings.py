@@ -197,7 +197,311 @@ SA105_UKP1 = {
 
 SA105_UKP2 = {
 
-    "Netprofit1": { "x": 84, "y": 748 },
+    "Totalrentsandotherincomefromproperty1": { "x": 84, "y": 721 },
+    "Totalrentsandotherincomefromproperty2": { "x": 101, "y": 721 },
+    "Totalrentsandotherincomefromproperty3": { "x": 116, "y": 721 },
+    "Totalrentsandotherincomefromproperty4": { "x": 131, "y": 721 },
+    "Totalrentsandotherincomefromproperty5": { "x": 146, "y": 721 },
+    "Totalrentsandotherincomefromproperty6": { "x": 161, "y": 721 },
+    "Totalrentsandotherincomefromproperty7": { "x": 176, "y": 721 },
+    "Totalrentsandotherincomefromproperty8": { "x": 191, "y": 721 },
+
+
+    "Propertyincomeallowance1": { "x": 84, "y": 679 },
+    "Propertyincomeallowance2": { "x": 101, "y": 679 },
+    "Propertyincomeallowance3": { "x": 116, "y": 679 },
+    "Propertyincomeallowance4": { "x": 131, "y": 679 },
+
+    "Ifyouveusedtraditionalaccounting": { "x": 270, "y": 640 },
+
+
+    "Rentpaidrepairsinsuranceandcostsofservices1": { "x": 84, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices2": { "x": 101, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices3": { "x": 116, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices4": { "x": 131, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices5": { "x": 146, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices6": { "x": 161, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices7": { "x": 176, "y": 562 },
+    "Rentpaidrepairsinsuranceandcostsofservices8": { "x": 191, "y": 562 },
+
+
+    "Propertyrepairsandmaintenance1": { "x": 84, "y": 519 },
+    "Propertyrepairsandmaintenance2": { "x": 101, "y": 519 },
+    "Propertyrepairsandmaintenance3": { "x": 116, "y": 519 },
+    "Propertyrepairsandmaintenance4": { "x": 131, "y": 519 },
+    "Propertyrepairsandmaintenance5": { "x": 146, "y": 519 },
+    "Propertyrepairsandmaintenance6": { "x": 161, "y": 519 },
+    "Propertyrepairsandmaintenance7": { "x": 176, "y": 519 },
+    "Propertyrepairsandmaintenance8": { "x": 191, "y": 519 },   
+
+    "Nonresidentialpropertyfinancecosts1": { "x": 84, "y": 485 },
+    "Nonresidentialpropertyfinancecosts2": { "x": 101, "y": 485 },
+    "Nonresidentialpropertyfinancecosts3": { "x": 116, "y": 485 },
+    "Nonresidentialpropertyfinancecosts4": { "x": 131, "y": 485 },
+    "Nonresidentialpropertyfinancecosts5": { "x": 146, "y": 485 },
+    "Nonresidentialpropertyfinancecosts6": { "x": 161, "y": 485 },
+    "Nonresidentialpropertyfinancecosts7": { "x": 176, "y": 485 },
+    "Nonresidentialpropertyfinancecosts8": { "x": 191, "y": 485 },
+
+
+    "Privateuseadjustment1": { "x": 84, "y": 416 },
+    "Privateuseadjustment2": { "x": 101, "y": 416 },
+    "Privateuseadjustment3": { "x": 116, "y": 416 },
+    "Privateuseadjustment4": { "x": 131, "y": 416 },
+    "Privateuseadjustment5": { "x": 146, "y": 416 },
+    "Privateuseadjustment6": { "x": 161, "y": 416 },
+    "Privateuseadjustment7": { "x": 176, "y": 416 },
+    "Privateuseadjustment8": { "x": 191, "y": 416 },
+
+
+    "Balancingcharges1": { "x": 84, "y": 377 },
+    "Balancingcharges2": { "x": 101, "y": 377 },
+    "Balancingcharges3": { "x": 116, "y": 377 },
+    "Balancingcharges4": { "x": 131, "y": 377 },
+    "Balancingcharges5": { "x": 146, "y": 377 },
+    "Balancingcharges6": { "x": 161, "y": 377 },
+    "Balancingcharges7": { "x": 176, "y": 377 },
+    "Balancingcharges8": { "x": 191, "y": 377 },
+
+
+    "AnnualInvestmentAllowance1": { "x": 84, "y": 337 },
+    "AnnualInvestmentAllowance2": { "x": 101, "y": 337 },
+    "AnnualInvestmentAllowance3": { "x": 116, "y": 337 },
+    "AnnualInvestmentAllowance4": { "x": 131, "y": 337 },
+    "AnnualInvestmentAllowance5": { "x": 146, "y": 337 },
+    "AnnualInvestmentAllowance6": { "x": 161, "y": 337 },
+    "AnnualInvestmentAllowance7": { "x": 176, "y": 337 },
+    "AnnualInvestmentAllowance8": { "x": 191, "y": 337 },
+
+
+
+    "TheStructuresandBuildingsAllowance1": { "x": 84, "y": 298 },
+    "TheStructuresandBuildingsAllowance2": { "x": 101, "y": 298 },
+    "TheStructuresandBuildingsAllowance3": { "x": 116, "y": 298 },
+    "TheStructuresandBuildingsAllowance4": { "x": 131, "y": 298 },
+    "TheStructuresandBuildingsAllowance5": { "x": 146, "y": 298 },
+    "TheStructuresandBuildingsAllowance6": { "x": 161, "y": 298 },
+    "TheStructuresandBuildingsAllowance7": { "x": 176, "y": 298 },
+    "TheStructuresandBuildingsAllowance8": { "x": 191, "y": 298 },
+
+    "Electricchargepointallowance1": { "x": 84, "y": 259 },
+    "Electricchargepointallowance2": { "x": 101, "y": 259 },
+    "Electricchargepointallowance3": { "x": 116, "y": 259 },
+    "Electricchargepointallowance4": { "x": 131, "y": 259 },
+    "Electricchargepointallowance5": { "x": 146, "y": 259 },
+    "Electricchargepointallowance6": { "x": 161, "y": 259 },
+    "Electricchargepointallowance7": { "x": 176, "y": 259 },
+    "Electricchargepointallowance8": { "x": 191, "y": 259 },
+
+    "FreeportandInvestmentZonesStructures1": { "x": 84, "y": 211 },
+    "FreeportandInvestmentZonesStructures2": { "x": 101, "y": 211 },
+    "FreeportandInvestmentZonesStructures3": { "x": 116, "y": 211 },
+    "FreeportandInvestmentZonesStructures4": { "x": 131, "y": 211 },
+    "FreeportandInvestmentZonesStructures5": { "x": 146, "y": 211 },
+    "FreeportandInvestmentZonesStructures6": { "x": 161, "y": 211 },
+    "FreeportandInvestmentZonesStructures7": { "x": 176, "y": 211 },
+    "FreeportandInvestmentZonesStructures8": { "x": 191, "y": 211 },
+
+
+    "Totalpropertyallowances1": { "x": 84, "y": 172 },
+    "Totalpropertyallowances2": { "x": 101, "y": 172 },
+    "Totalpropertyallowances3": { "x": 116, "y": 172 },
+    "Totalpropertyallowances4": { "x": 131, "y": 172 },
+    "Totalpropertyallowances5": { "x": 146, "y": 172 },
+    "Totalpropertyallowances6": { "x": 161, "y": 172 },
+    "Totalpropertyallowances7": { "x": 176, "y": 172 },
+    "Totalpropertyallowances8": { "x": 191, "y": 172 }, 
+
+
+    "Zero-emissioncarallowance1": { "x": 84, "y": 133 },
+    "Zero-emissioncarallowance2": { "x": 101, "y": 133 },
+    "Zero-emissioncarallowance3": { "x": 116, "y": 133 },
+    "Zero-emissioncarallowance4": { "x": 131, "y": 133 },
+    "Zero-emissioncarallowance5": { "x": 146, "y": 133 },
+    "Zero-emissioncarallowance6": { "x": 161, "y": 133 },
+    "Zero-emissioncarallowance7": { "x": 176, "y": 133 },
+    "Zero-emissioncarallowance8": { "x": 191, "y": 133 },
+
+
+    "Allothercapitalallowances1": { "x": 84, "y": 94 },
+    "Allothercapitalallowances2": { "x": 101, "y": 94 },
+    "Allothercapitalallowances3": { "x": 116, "y": 94 },
+    "Allothercapitalallowances4": { "x": 131, "y": 94 },
+    "Allothercapitalallowances5": { "x": 146, "y": 94 },
+    "Allothercapitalallowances6": { "x": 161, "y": 94 },
+    "Allothercapitalallowances7": { "x": 176, "y": 94 },
+    "Allothercapitalallowances8": { "x": 191, "y": 94 },
+
+    "Costsofreplacingdomesticitems1": { "x": 84, "y": 44 },
+    "Costsofreplacingdomesticitems2": { "x": 101, "y": 44 },
+    "Costsofreplacingdomesticitems3": { "x": 116, "y": 44 },
+    "Costsofreplacingdomesticitems4": { "x": 131, "y": 44 },
+    "Costsofreplacingdomesticitems5": { "x": 146, "y": 44 },
+    "Costsofreplacingdomesticitems6": { "x": 161, "y": 44 },
+    "Costsofreplacingdomesticitems7": { "x": 176, "y": 44 },
+    "Costsofreplacingdomesticitems8": { "x": 191, "y": 44 },\
+
+
+    "Taxtakenoffanyincomeinbox1": { "x": 343, "y": 721 },
+    "Taxtakenoffanyincomeinbox2": { "x": 358, "y": 721 },
+    "Taxtakenoffanyincomeinbox3": { "x": 373, "y": 721 },
+    "Taxtakenoffanyincomeinbox4": { "x": 388, "y": 721 },
+    "Taxtakenoffanyincomeinbox5": { "x": 403, "y": 721 },
+    "Taxtakenoffanyincomeinbox6": { "x": 418, "y": 721 },
+    "Taxtakenoffanyincomeinbox7": { "x": 433, "y": 721 },
+    "Taxtakenoffanyincomeinbox8": { "x": 448, "y": 721 },
+
+    "Premiumsforthegrantofalease1": { "x": 344, "y": 670 },
+    "Premiumsforthegrantofalease2": { "x": 359, "y": 670 },
+    "Premiumsforthegrantofalease3": { "x": 374, "y": 670 },
+    "Premiumsforthegrantofalease4": { "x": 389, "y": 670 },
+    "Premiumsforthegrantofalease5": { "x": 404, "y": 670 },
+    "Premiumsforthegrantofalease6": { "x": 419, "y": 670 },
+    "Premiumsforthegrantofalease7": { "x": 434, "y": 670 },
+    "Premiumsforthegrantofalease8": { "x": 449, "y": 670 },
+
+    "Reversepremiumsandinducements1": { "x": 344, "y": 629 },
+    "Reversepremiumsandinducements2": { "x": 359, "y": 629 },
+    "Reversepremiumsandinducements3": { "x": 374, "y": 629 },
+    "Reversepremiumsandinducements4": { "x": 389, "y": 629 },
+    "Reversepremiumsandinducements5": { "x": 404, "y": 629 },
+    "Reversepremiumsandinducements6": { "x": 419, "y": 629 },
+    "Reversepremiumsandinducements7": { "x": 434, "y": 629 },
+    "Reversepremiumsandinducements8": { "x": 449, "y": 629 },
+
+
+    "Legalmanagementandotherprofessionalfees1": { "x": 344, "y": 561 },
+    "Legalmanagementandotherprofessionalfees2": { "x": 359, "y": 561 },
+    "Legalmanagementandotherprofessionalfees3": { "x": 374, "y": 561 },
+    "Legalmanagementandotherprofessionalfees4": { "x": 389, "y": 561 },
+    "Legalmanagementandotherprofessionalfees5": { "x": 404, "y": 561 },
+    "Legalmanagementandotherprofessionalfees6": { "x": 419, "y": 561 },
+    "Legalmanagementandotherprofessionalfees7": { "x": 434, "y": 561 },
+    "Legalmanagementandotherprofessionalfees8": { "x": 449, "y": 561 },
+
+
+    "Costsofservicesprovidedincludingwages1": { "x": 344, "y": 523 },
+    "Costsofservicesprovidedincludingwages2": { "x": 359, "y": 523 },
+    "Costsofservicesprovidedincludingwages3": { "x": 374, "y": 523 },
+    "Costsofservicesprovidedincludingwages4": { "x": 389, "y": 523 },
+    "Costsofservicesprovidedincludingwages5": { "x": 404, "y": 523 },
+    "Costsofservicesprovidedincludingwages6": { "x": 419, "y": 523 },
+    "Costsofservicesprovidedincludingwages7": { "x": 434, "y": 523 },
+    "Costsofservicesprovidedincludingwages8": { "x": 449, "y": 523 },
+
+
+
+    "Otherallowablepropertyexpenses1": { "x": 344, "y": 485 },
+    "Otherallowablepropertyexpenses2": { "x": 359, "y": 485 },
+    "Otherallowablepropertyexpenses3": { "x": 374, "y": 485 },
+    "Otherallowablepropertyexpenses4": { "x": 389, "y": 485 },
+    "Otherallowablepropertyexpenses5": { "x": 404, "y": 485 },
+    "Otherallowablepropertyexpenses6": { "x": 419, "y": 485 },
+    "Otherallowablepropertyexpenses7": { "x": 434, "y": 485 },
+    "Otherallowablepropertyexpenses8": { "x": 449, "y": 485 },
+
+
+
+    "RentARoomexemptamount1": { "x": 344, "y": 416 },
+    "RentARoomexemptamount2": { "x": 359, "y": 416 },
+    "RentARoomexemptamount3": { "x": 374, "y": 416 },
+    "RentARoomexemptamount4": { "x": 389, "y": 416 },
+
+
+    "Adjustedprofitfortheyear1": { "x": 344, "y": 366 },
+    "Adjustedprofitfortheyear2": { "x": 359, "y": 366 },
+    "Adjustedprofitfortheyear3": { "x": 374, "y": 366 },
+    "Adjustedprofitfortheyear4": { "x": 389, "y": 366 },
+    "Adjustedprofitfortheyear5": { "x": 404, "y": 366 },
+    "Adjustedprofitfortheyear6": { "x": 419, "y": 366 },
+    "Adjustedprofitfortheyear7": { "x": 434, "y": 366 },
+    "Adjustedprofitfortheyear8": { "x": 449, "y": 366 },
+
+    "Lossbroughtforwardusedagainstthisyearsprofits1": { "x": 344, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits2": { "x": 359, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits3": { "x": 374, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits4": { "x": 389, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits5": { "x": 404, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits6": { "x": 419, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits7": { "x": 434, "y": 325 },
+    "Lossbroughtforwardusedagainstthisyearsprofits8": { "x": 449, "y": 325 },
+
+
+
+    "Taxableprofitfortheyear1": { "x": 344, "y": 287 },
+    "Taxableprofitfortheyear2": { "x": 359, "y": 287 },
+    "Taxableprofitfortheyear3": { "x": 374, "y": 287 },
+    "Taxableprofitfortheyear4": { "x": 389, "y": 287 },
+    "Taxableprofitfortheyear5": { "x": 404, "y": 287 },
+    "Taxableprofitfortheyear6": { "x": 419, "y": 287 },
+    "Taxableprofitfortheyear7": { "x": 434, "y": 287 },
+    "Taxableprofitfortheyear8": { "x": 449, "y": 287 },
+
+
+    "Adjustedlossfortheyear1": { "x": 344, "y": 236 },
+    "Adjustedlossfortheyear2": { "x": 359, "y": 236 },
+    "Adjustedlossfortheyear3": { "x": 374, "y": 236 },
+    "Adjustedlossfortheyear4": { "x": 389, "y": 236 },
+    "Adjustedlossfortheyear5": { "x": 404, "y": 236 },
+    "Adjustedlossfortheyear6": { "x": 419, "y": 236 },
+    "Adjustedlossfortheyear7": { "x": 434, "y": 236 },
+    "Adjustedlossfortheyear8": { "x": 449, "y": 236 },
+
+
+    "Losssetoffagainst2024–25totalincome1": { "x": 344, "y": 186 },
+    "Losssetoffagainst2024–25totalincome2": { "x": 359, "y": 186 },
+    "Losssetoffagainst2024–25totalincome3": { "x": 374, "y": 186 },
+    "Losssetoffagainst2024–25totalincome4": { "x": 389, "y": 186 },
+    "Losssetoffagainst2024–25totalincome5": { "x": 404, "y": 186 },
+    "Losssetoffagainst2024–25totalincome6": { "x": 419, "y": 186 },
+    "Losssetoffagainst2024–25totalincome7": { "x": 434, "y": 186 },
+    "Losssetoffagainst2024–25totalincome8": { "x": 449, "y": 186 },
+
+
+    "Losstocarryforwardtofollowingyear1": { "x": 344, "y": 136 },
+    "Losstocarryforwardtofollowingyear2": { "x": 359, "y": 136 },
+    "Losstocarryforwardtofollowingyear3": { "x": 374, "y": 136 },
+    "Losstocarryforwardtofollowingyear4": { "x": 389, "y": 136 },
+    "Losstocarryforwardtofollowingyear5": { "x": 404, "y": 136 },
+    "Losstocarryforwardtofollowingyear6": { "x": 419, "y": 136 },
+    "Losstocarryforwardtofollowingyear7": { "x": 434, "y": 136 },
+    "Losstocarryforwardtofollowingyear8": { "x": 449, "y": 136 },
+
+
+
+    "Residentialpropertyfinancecosts1": { "x": 344, "y": 96 },
+    "Residentialpropertyfinancecosts2": { "x": 359, "y": 96 },
+    "Residentialpropertyfinancecosts3": { "x": 374, "y": 96 },
+    "Residentialpropertyfinancecosts4": { "x": 389, "y": 96 },
+    "Residentialpropertyfinancecosts5": { "x": 404, "y": 96 },
+    "Residentialpropertyfinancecosts6": { "x": 419, "y": 96 },
+    "Residentialpropertyfinancecosts7": { "x": 434, "y": 96 },
+    "Residentialpropertyfinancecosts8": { "x": 449, "y": 96 },
+
+
+    "Unusedresidentialpropertyfinancecosts1": { "x": 344, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts2": { "x": 359, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts3": { "x": 374, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts4": { "x": 389, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts5": { "x": 404, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts6": { "x": 419, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts7": { "x": 434, "y": 48 },
+    "Unusedresidentialpropertyfinancecosts8": { "x": 449, "y": 48 },
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
     
 
 
