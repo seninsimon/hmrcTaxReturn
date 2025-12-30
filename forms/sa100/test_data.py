@@ -200,8 +200,253 @@ DATA_SA100_TR3 = {
     "Anytaxtakenoffbox178": "0",
 }
 
-DATA_SA100_TR4 = {}
-DATA_SA100_TR5 = {}
-DATA_SA100_TR6 = {}
+DATA_SA100_TR4 = {
+
+  "Paymentstoregisteredpensionschemes1": "0",
+  "Paymentstoregisteredpensionschemes2": "0",
+  "Paymentstoregisteredpensionschemes3": "0",
+  "Paymentstoregisteredpensionschemes4": "0",
+  "Paymentstoregisteredpensionschemes5": "0",
+  "Paymentstoregisteredpensionschemes6": "0",
+  "Paymentstoregisteredpensionschemes7": "0",
+  "Paymentstoregisteredpensionschemes8": "0",
+
+
+    "Totalofanyone-offpaymentsinboxone1": "0",
+    "Totalofanyone-offpaymentsinboxone2": "0",
+    "Totalofanyone-offpaymentsinboxone3": "0",
+    "Totalofanyone-offpaymentsinboxone4": "0",
+    "Totalofanyone-offpaymentsinboxone5": "0",
+    "Totalofanyone-offpaymentsinboxone6": "0",
+    "Totalofanyone-offpaymentsinboxone7": "0",
+    "Totalofanyone-offpaymentsinboxone8": "0",
+
+
+    "Paymentstoaretirementannuitycontract1": "0",
+    "Paymentstoaretirementannuitycontract2": "0",
+    "Paymentstoaretirementannuitycontract3": "0",
+    "Paymentstoaretirementannuitycontract4": "0",
+    "Paymentstoaretirementannuitycontract5": "0",
+    "Paymentstoaretirementannuitycontract6": "0",
+    "Paymentstoaretirementannuitycontract7": "0",
+    "Paymentstoaretirementannuitycontract8": "0",
+
+
+    "GiftAidpaymentsmadeinyearto5April20251": "0", 
+    "GiftAidpaymentsmadeinyearto5April20252": "0",
+    "GiftAidpaymentsmadeinyearto5April20253": "0",
+    "GiftAidpaymentsmadeinyearto5April20254": "0",
+    "GiftAidpaymentsmadeinyearto5April20255": "0",
+    "GiftAidpaymentsmadeinyearto5April20256": "0",
+    "GiftAidpaymentsmadeinyearto5April20257": "0",
+    "GiftAidpaymentsmadeinyearto5April20258": "0",
+
+
+     "Totalofanyone-offpaymentsinboxfive1": "0",
+     "Totalofanyone-offpaymentsinboxfive2": "0",
+     "Totalofanyone-offpaymentsinboxfive3": "0",
+     "Totalofanyone-offpaymentsinboxfive4": "0",
+     "Totalofanyone-offpaymentsinboxfive5": "0",
+     "Totalofanyone-offpaymentsinboxfive6": "0",
+     "Totalofanyone-offpaymentsinboxfive7": "0",
+     "Totalofanyone-offpaymentsinboxfive8": "0",
+
+
+      "treatedasifmadeintheyearto5April20241": "0",
+      "treatedasifmadeintheyearto5April20242": "0",
+      "treatedasifmadeintheyearto5April20243": "0",
+      "treatedasifmadeintheyearto5April20244": "0",
+      "treatedasifmadeintheyearto5April20245": "0",
+      "treatedasifmadeintheyearto5April20246": "0",
+      "treatedasifmadeintheyearto5April20247": "0",
+      "treatedasifmadeintheyearto5April20248": "0",
+
+        "Paymentstoyouremployersschemewhichwerenotdeducted1": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted2": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted3": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted4": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted5": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted6": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted7": "0",
+        "Paymentstoyouremployersschemewhichwerenotdeducted8": "0",
+
+        "Taxreliefsfour1": "0",
+        "Taxreliefsfour2": "0",
+        "Taxreliefsfour3": "0",
+        "Taxreliefsfour4": "0",
+        "Taxreliefsfour5": "0",
+        "Taxreliefsfour6": "0",
+        "Taxreliefsfour7": "0",
+        "Taxreliefsfour8": "0",
+
+
+        "Taxreliefseight1": "0",
+        "Taxreliefseight2": "0",
+        "Taxreliefseight3": "0",
+        "Taxreliefseight4": "0",
+        "Taxreliefseight5": "0",
+        "Taxreliefseight6": "0",
+        "Taxreliefseight7": "0",
+        "Taxreliefseight8": "0",
+
+
+        "Taxreliefsnine1": "0",
+        "Taxreliefsnine2": "0",
+        "Taxreliefsnine3": "0",
+        "Taxreliefsnine4": "0",
+        "Taxreliefsnine5": "0",
+        "Taxreliefsnine6": "0",
+        "Taxreliefsnine7": "0",
+        "Taxreliefsnine8": "0",
+
+
+        "taxreliefsten1": "0",
+        "taxreliefsten2": "0",
+        "taxreliefsten3": "0",
+        "taxreliefsten4": "0",
+        "taxreliefsten5": "0",
+        "taxreliefsten6": "0",
+        "taxreliefsten7": "0",
+        "taxreliefsten8": "0",
+
+        "taxreliefsthirteen": "X",
+
+        "taxrelieffifteen": "X",
+
+        "taxreliefsixteen": "X",
+
+        "taxrelieffourteen": "senin",
+        
+        
+
+
+
+
+}
+DATA_SA100_TR5 = {
+
+     "Ifyou’vereceivednotificationfromStudentLoans": "X",
+
+     "IfyouremployerhasdeductedStudentLoan1": "0",
+     "IfyouremployerhasdeductedStudentLoan2": "0",
+     "IfyouremployerhasdeductedStudentLoan3": "0",
+     "IfyouremployerhasdeductedStudentLoan4": "0",
+     "IfyouremployerhasdeductedStudentLoan5": "0",
+     "IfyouremployerhasdeductedStudentLoan6": "0",
+     "IfyouremployerhasdeductedStudentLoan7": "0",
+     "IfyouremployerhasdeductedStudentLoan8": "0",
+
+
+     "IfyouremployerhasdeductedPostgraduateLoan1": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan2": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan3": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan4": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan5": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan6": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan7": "0",
+     "IfyouremployerhasdeductedPostgraduateLoan8": "0",
+
+      "EnterthetotalamountofChildBenefit1": "0",
+      "EnterthetotalamountofChildBenefit2": "0",
+      "EnterthetotalamountofChildBenefit3": "0",
+      "EnterthetotalamountofChildBenefit4": "0",
+      "EnterthetotalamountofChildBenefit5": "0",
+
+        "Enterthenumberofchildren": "12",
+
+
+        "stoppedgettingallChildBenefitpaymentsday": "10",
+        "stoppedgettingallChildBenefitpaymentsmonth": "12",
+        "stoppedgettingallChildBenefitpaymentsyear": "2024",
+
+
+          "Yourspouseorcivilpartner’sfirstname": "aksdbsabd",
+          "Yourspouseorcivilpartner’slastname": "aksdbsabd",
+
+
+         "YourspouseorcivilpartnersNationalInsuranceNumber1": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber2": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber3": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber4": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber5": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber6": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber7": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber8": "0",
+         "YourspouseorcivilpartnersNationalInsuranceNumber9": "0",
+
+
+           "Yourspouseorcivilpartner’sdateofbirthday": "12",
+           "Yourspouseorcivilpartner’sdateofbirthmonth": "12",
+           "Yourspouseorcivilpartner’sdateofbirthyear": "2024",
+
+             "Dateofmarriageorcivilpartnershipday": "12",
+             "Dateofmarriageorcivilpartnershipmonth": "12",
+             "Dateofmarriageorcivilpartnershipyear": "2024",
+
+
+
+}
+DATA_SA100_TR6 = {
+
+
+    "Taxrefundedorsetoffone1": "0",
+    "Taxrefundedorsetoffone2": "0",
+    "Taxrefundedorsetoffone3": "0",
+    "Taxrefundedorsetoffone4": "0",
+    "Taxrefundedorsetoffone5": "0",
+    "Taxrefundedorsetoffone6": "0",
+    "Taxrefundedorsetoffone7": "0",
+    "Taxrefundedorsetoffone8": "0",
+
+
+    "Ifyouhavenotpaidenoughtaxtwo": "X",
+
+    "Ifyouhavenotpaidenoughtaxthree": "X",
+
+    "Nameofbankorbuildingsociety": "aksdbsabd",
+
+    "Nameofaccountholder": "aksdbsabd",
+
+    "Branchsortcode1": "0",
+    "Branchsortcode2": "0",
+    "Branchsortcode3": "0",
+    "Branchsortcode4": "0",
+    "Branchsortcode5": "0",
+    "Branchsortcode6": "0",
+
+       "Accountnumber1": "0",
+       "Accountnumber2": "0",
+       "Accountnumber3": "0",
+       "Accountnumber4": "0",
+       "Accountnumber5": "0",
+       "Accountnumber6": "0",
+       "Accountnumber7": "0",
+       "Accountnumber8": "0",
+
+
+         "Buildingsocietyreferencenumber1": "0",
+         "Buildingsocietyreferencenumber2": "0",
+         "Buildingsocietyreferencenumber3": "0",
+         "Buildingsocietyreferencenumber4": "0",
+         "Buildingsocietyreferencenumber5": "0",
+         "Buildingsocietyreferencenumber6": "0",
+         "Buildingsocietyreferencenumber7": "0",
+         "Buildingsocietyreferencenumber8": "0",
+         "Buildingsocietyreferencenumber9": "0",
+         "Buildingsocietyreferencenumber10": "0",
+         "Buildingsocietyreferencenumber11": "0",
+         "Buildingsocietyreferencenumber12": "0",
+         "Buildingsocietyreferencenumber13": "0",
+         "Buildingsocietyreferencenumber14": "0",
+
+
+        "IfyouornomineehavenotUKbank": "X",
+
+        "Ifyou’veenteredanomine’snameinbox5": "X",
+
+        "Ifyournomineeisyourtaxadviser": "X",
+
+
+}
 DATA_SA100_TR7 = {}
 DATA_SA100_TR8 = {}
