@@ -283,6 +283,8 @@ SA100_TR3 = {
     'Anytaxtakenoffbox176': {'x': 163, 'y': 47, 'type': 'text'},
     'Anytaxtakenoffbox177': {'x': 179, 'y': 47, 'type': 'text'},
     'Anytaxtakenoffbox178': {'x': 195, 'y': 47, 'type': 'text'},
+
+    'Descriptionofincomeinboxes17and20': {'x': 329, 'y': 83, 'type': 'text'},
 }
 
 SA100_TR4 = {
@@ -567,10 +569,94 @@ SA100_TR6 = {
 
      "Ifyournomineeisyourtaxadviser": {'x': 327, 'y': 263, 'type': 'text'},
 
+     "Nomineesaddress": {'x': 327, 'y': 216, 'type': 'text'},
+
+     "postcode1": {'x': 327, 'y': 136, 'type': 'text'},
+     "postcode2": {'x': 344, 'y': 136, 'type': 'text'},
+     "postcode3": {'x': 361, 'y': 136, 'type': 'text'},
+     "postcode4": {'x': 378, 'y': 136, 'type': 'text'},
+     "postcode5": {'x': 398, 'y': 136, 'type': 'text'},
+     "postcode6": {'x': 415, 'y': 136, 'type': 'text'},
+     "postcode7": {'x': 432, 'y': 136, 'type': 'text'},
+     "postcode8": {'x': 449, 'y': 136, 'type': 'text'},
+
+     "Ifyouhavepaidtoomuchtaxsign14": {'x': 369, 'y': 63, 'type': 'text'},
+
+
+
+    
+
 }
 SA100_TR7 = {
 
+     "Yourtaxadviser’sname": {'x': 69, 'y': 711, 'type': 'text'},
+
+     "Theirphonenumber1": {'x': 69, 'y': 643, 'type': 'text'},
+     "Theirphonenumber2": {'x': 85, 'y': 643, 'type': 'text'},
+     "Theirphonenumber3": {'x': 101, 'y': 643, 'type': 'text'},
+     "Theirphonenumber4": {'x': 116, 'y': 643, 'type': 'text'},
+     "Theirphonenumber5": {'x': 132, 'y': 643, 'type': 'text'},
+     "Theirphonenumber6": {'x': 145, 'y': 643, 'type': 'text'},
+     "Theirphonenumber7": {'x': 160, 'y': 643, 'type': 'text'},
+     "Theirphonenumber8": {'x': 177, 'y': 643, 'type': 'text'},
+     "Theirphonenumber9": {'x': 192, 'y': 643, 'type': 'text'},
+     "Theirphonenumber10": {'x': 209, 'y': 643, 'type': 'text'},
+     "Theirphonenumber11": {'x': 225, 'y': 643, 'type': 'text'},
+     "Theirphonenumber12": {'x': 243, 'y': 643, 'type': 'text'},
+     "Theirphonenumber13": {'x': 256, 'y': 643, 'type': 'text'},
+     "Theirphonenumber14": {'x': 273, 'y': 643, 'type': 'text'},
+
+
+     "Thefirstlineoftheirdaddressincludingthepostcode": {'x': 330, 'y': 712, 'type': 'text'},
+
+
+     "Thereferenceyouradviserusesforyou1": {'x': 327, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou2": {'x': 344, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou3": {'x': 361, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou4": {'x': 378, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou5": {'x': 391, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou6": {'x': 406, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou7": {'x': 422, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou8": {'x': 439, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou9": {'x': 456, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou10": {'x': 468, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou11": {'x': 486, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou12": {'x': 500, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou13": {'x': 518, 'y': 611, 'type': 'text'},
+     "Thereferenceyouradviserusesforyou14": {'x': 534, 'y': 611, 'type': 'text'},
+
+
+     "Pleasegiveanyotherinformationinthisspace": {'x': 78, 'y': 533, 'type': 'text'},
+
    
 }
-SA100_TR8 = {}
+SA100_TR8 = {
+
+
+    "Ifthistaxreturncontainsprovisionalfigures": {'x': 69, 'y': 687, 'type': 'text'},
+
+    "Ifyou’reenclosingseparatesupplementarypages": {'x': 69, 'y': 624, 'type': 'text'},
+
+     "Signature": {'x': 114, 'y': 485, 'type': 'text'},
+
+      "dateDay": {'x': 69, 'y': 414, 'type': 'boxed' , 'box_width': 12,
+        'spacing': 1},
+     "dateMonth": {'x': 107, 'y': 414, 'type': 'boxed', 'box_width': 12,
+        'spacing': 1},
+     "dateYear": {'x': 145, 'y': 414, 'type': 'boxed' , 'box_width': 15,
+        'spacing': 1},
+
+
+        "Ifyou’vesignedonbehalfofsomeoneelse":{'x': 327, 'y': 713, 'type': 'text'},
+
+
+        "Enterthenamethepersonyou’vesignedfor": {'x': 330, 'y': 645, 'type': 'text'},
+
+        "Ifyoufilledinboxes23and24enteryourname": {'x': 330, 'y': 578, 'type': 'text'},
+
+        "andyouraddress": {'x': 330, 'y': 512, 'type': 'text'},
+
+
+        
+}
  

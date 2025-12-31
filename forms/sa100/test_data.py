@@ -198,6 +198,8 @@ DATA_SA100_TR3 = {
     "Anytaxtakenoffbox176": "0",
     "Anytaxtakenoffbox177": "0",
     "Anytaxtakenoffbox178": "0",
+
+    "Descriptionofincomeinboxes17and20": "aksdbsabd",
 }
 
 DATA_SA100_TR4 = {
@@ -446,7 +448,84 @@ DATA_SA100_TR6 = {
 
         "Ifyournomineeisyourtaxadviser": "X",
 
+         "Nomineesaddress": "aksdbsabd",
+
+         "postcode1": "0",
+         "postcode2": "0",
+         "postcode3": "0",
+         "postcode4": "0",
+         "postcode5": "0",
+         "postcode6": "0",
+         "postcode7": "0",
+         "postcode8": "0",
+
+
+         "Ifyouhavepaidtoomuchtaxsign14": "sign",
+
+         
+        
+         
+
 
 }
-DATA_SA100_TR7 = {}
-DATA_SA100_TR8 = {}
+DATA_SA100_TR7 = {
+
+   "Yourtaxadviser’sname": "aksdbsabd",
+
+   "Theirphonenumber1": "0",
+   "Theirphonenumber2": "0",
+   "Theirphonenumber3": "0",
+   "Theirphonenumber4": "0",
+   "Theirphonenumber5": "0",
+   "Theirphonenumber6": "0",
+   "Theirphonenumber7": "0",
+   "Theirphonenumber8": "0",
+   "Theirphonenumber9": "0",
+   "Theirphonenumber10": "0",
+   "Theirphonenumber11": "0",
+   "Theirphonenumber12": "0",
+   "Theirphonenumber13": "0",
+   "Theirphonenumber14": "0",
+
+
+   "Thefirstlineoftheirdaddressincludingthepostcode": "aksdbsabd",
+
+   "Thereferenceyouradviserusesforyou1": "0",
+   "Thereferenceyouradviserusesforyou2": "0",
+   "Thereferenceyouradviserusesforyou3": "0",
+   "Thereferenceyouradviserusesforyou4": "0",
+   "Thereferenceyouradviserusesforyou5": "0",
+   "Thereferenceyouradviserusesforyou6": "0",
+   "Thereferenceyouradviserusesforyou7": "0",
+   "Thereferenceyouradviserusesforyou8": "0",
+   "Thereferenceyouradviserusesforyou9": "0",
+   "Thereferenceyouradviserusesforyou10": "0",
+   "Thereferenceyouradviserusesforyou11": "0",
+   "Thereferenceyouradviserusesforyou12": "0",
+   "Thereferenceyouradviserusesforyou13": "0",
+   "Thereferenceyouradviserusesforyou14": "0",
+
+
+   "Pleasegiveanyotherinformationinthisspace": "aksdbsabd",
+}
+DATA_SA100_TR8 = {
+
+   "Ifthistaxreturncontainsprovisionalfigures": "X",
+
+   "Ifyou’reenclosingseparatesupplementarypages": "X",
+
+   "Signature": "aksdbsabd",
+
+   "dateDay": "12",
+   "dateMonth": "12",
+   "dateYear": "2024",
+
+
+   "Ifyou’vesignedonbehalfofsomeoneelse": "Xasdasd",
+
+   "Enterthenamethepersonyou’vesignedfor": "aksdbsabd",
+
+   "Ifyoufilledinboxes23and24enteryourname": "aksdbsabd",
+
+   "andyouraddress": "aksdbsabd",
+}
