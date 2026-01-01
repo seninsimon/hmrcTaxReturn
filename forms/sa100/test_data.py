@@ -15,11 +15,16 @@ DATA_SA100_TR1 = {
     'dateofbirthday2': "12",
     'dateofbirthmonth2': "12",
     'dateofbirthyear2': "2022",
-    'NationalInsuranceNumber1': "00",
-    'NationalInsuranceNumber2': "00",
-    'NationalInsuranceNumber3': "00",
-    'NationalInsuranceNumber4': "00",
-    'NationalInsuranceNumber5': "0"
+    'NationalInsuranceNumber1': "0",
+    'NationalInsuranceNumber2': "0",
+    'NationalInsuranceNumber3': "0",
+    'NationalInsuranceNumber4': "0",
+    'NationalInsuranceNumber5': "0",
+    'NationalInsuranceNumber6': "0",
+    'NationalInsuranceNumber7': "0",
+    'NationalInsuranceNumber8': "0",
+    'NationalInsuranceNumber9': "0",
+
 }
 
 # Data for SA100 Page 2 (TR2)
