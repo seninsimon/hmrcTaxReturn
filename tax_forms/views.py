@@ -309,7 +309,7 @@ def normalize_keys(data_dict):
     It seems the pattern is: [LETTERS][NUMBER]_[SUB_NUMBER]_[INDEX] -> [LETTERS][NUMBER].[SUB_NUMBER]_[INDEX]
 
     We can write a specific replacement logic or just manual overrides for common known issues if the list is small.
-    Given the user's specific comment, I will attempt to detect the pattern `[A-Z]+\d+_\d+_\d+` and convert the first underscore to a dot.
+    Given the user's specific comment, I will attempt to detect the pattern `[A-Z]+\\d+_\\d+_\\d+` and convert the first underscore to a dot.
     """
     import re
     new_dict = {}
@@ -384,7 +384,11 @@ def map_single_form_data(flat_data, mappings_list):
 def generate_unified_pdf_view(request):
     """
     Fetches data for all forms and merges them into a single PDF.
+    Does not leave temporary files on disk.
     """
+    import tempfile
+    import io
+
     try:
         raw_data = fetch_unified_data()
         if not raw_data:
@@ -394,129 +398,110 @@ def generate_unified_pdf_view(request):
         data = normalize_keys(raw_data)
 
         merger = PdfWriter()
-        files_to_clean = []
 
         base_dir = settings.BASE_DIR
-        media_root = getattr(settings, 'MEDIA_ROOT', 'media')
-        output_dir = os.path.join(media_root, 'temp_unified')
-        os.makedirs(output_dir, exist_ok=True)
+        # Use a temporary directory context manager to ensure cleanup
+        with tempfile.TemporaryDirectory() as output_dir:
 
-        # 1. SA100
-        if 'SA100' in data and data['SA100'] and generate_sa100:
-            sa100_flat = data['SA100']
-            sa100_mappings = [
-                ('tr1', SA100_TR1), ('tr2', SA100_TR2), ('tr3',
-                                                         SA100_TR3), ('tr4', SA100_TR4),
-                ('tr5', SA100_TR5), ('tr6', SA100_TR6), ('tr7',
-                                                         SA100_TR7), ('tr8', SA100_TR8)
-            ]
-            sa100_data = map_single_form_data(sa100_flat, sa100_mappings)
+            # 1. SA100
+            if 'SA100' in data and data['SA100'] and generate_sa100:
+                sa100_flat = data['SA100']
+                sa100_mappings = [
+                    ('tr1', SA100_TR1), ('tr2', SA100_TR2), ('tr3',
+                                                             SA100_TR3), ('tr4', SA100_TR4),
+                    ('tr5', SA100_TR5), ('tr6', SA100_TR6), ('tr7',
+                                                             SA100_TR7), ('tr8', SA100_TR8)
+                ]
+                sa100_data = map_single_form_data(sa100_flat, sa100_mappings)
 
-            path_sa100 = os.path.join(output_dir, 'sa100.pdf')
-            templates_sa100 = os.path.join(
-                base_dir, 'tax_forms', 'form_definitions', 'sa100', 'templates')
+                path_sa100 = os.path.join(output_dir, 'sa100.pdf')
+                templates_sa100 = os.path.join(
+                    base_dir, 'tax_forms', 'form_definitions', 'sa100', 'templates')
 
-            generated_path = generate_sa100(
-                sa100_data, output_path=path_sa100, templates_dir=templates_sa100)
-            merger.append(generated_path)
-            files_to_clean.append(generated_path)
-
-        # 2. SA102 (Employment) - List of forms
-        if 'SA102' in data and data['SA102'] and generate_sa102:
-            sa102_list = data['SA102'] if isinstance(
-                data['SA102'], list) else [data['SA102']]
-            # Note: DATA_SA102_TR1 are test data dicts, not mappings!
-            # We need the mappings from the generator or mappings file.
-            # Wait, previously we imported mapping objects in generators.
-            # Let's import them properly here or use what we used in fetch_and_map_sa100.
-            # Ah, for SA102 we didn't import mappings in views.py before.
-            # We need to import them now.
-            # Quick fix: Import mappings inside the loop to avoid top-level clutter or missing imports.
-            from tax_forms.form_definitions.sa102.mappings import SA102_TR1, SA102_TR2
-
-            for idx, form_data in enumerate(sa102_list):
-                # form_data is a dictionary for one SA102
-                mapped_sa102 = map_single_form_data(
-                    form_data, [('tr1', SA102_TR1), ('tr2', SA102_TR2)])
-
-                path_sa102 = os.path.join(output_dir, f'sa102_{idx}.pdf')
-                templates_sa102 = os.path.join(
-                    base_dir, 'tax_forms', 'form_definitions', 'sa102', 'templates')
-
-                generated_path = generate_sa102(
-                    mapped_sa102, output_path=path_sa102, templates_dir=templates_sa102)
+                generated_path = generate_sa100(
+                    sa100_data, output_path=path_sa100, templates_dir=templates_sa100)
                 merger.append(generated_path)
-                files_to_clean.append(generated_path)
 
-        # 3. SA103S (Self-Employment Short) - List of forms
-        if 'SA103S' in data and data['SA103S'] and generate_sa103s:
-            sa103s_list = data['SA103S'] if isinstance(
-                data['SA103S'], list) else [data['SA103S']]
+            # 2. SA102 (Employment)
+            if 'SA102' in data and data['SA102'] and generate_sa102:
+                sa102_list = data['SA102'] if isinstance(
+                    data['SA102'], list) else [data['SA102']]
+                from tax_forms.form_definitions.sa102.mappings import SA102_TR1, SA102_TR2
 
-            for idx, form_data in enumerate(sa103s_list):
-                mapped_sa103s = map_single_form_data(
-                    form_data, [('ses1', SA103s_SES1), ('ses2', SA103s_SES2)])
+                for idx, form_data in enumerate(sa102_list):
+                    mapped_sa102 = map_single_form_data(
+                        form_data, [('tr1', SA102_TR1), ('tr2', SA102_TR2)])
 
-                path_sa103s = os.path.join(output_dir, f'sa103s_{idx}.pdf')
-                templates_sa103s = os.path.join(
-                    base_dir, 'tax_forms', 'form_definitions', 'sa103s', 'templates')
+                    path_sa102 = os.path.join(output_dir, f'sa102_{idx}.pdf')
+                    templates_sa102 = os.path.join(
+                        base_dir, 'tax_forms', 'form_definitions', 'sa102', 'templates')
 
-                generated_path = generate_sa103s(
-                    mapped_sa103s, output_path=path_sa103s, templates_dir=templates_sa103s)
-                merger.append(generated_path)
-                files_to_clean.append(generated_path)
+                    generated_path = generate_sa102(
+                        mapped_sa102, output_path=path_sa102, templates_dir=templates_sa102)
+                    merger.append(generated_path)
 
-        # 4. SA105 (UK Property) - Single or List? User JSON shows Object. Assuming List support safe.
-        if 'SA105' in data and data['SA105'] and generate_sa105:
-            # Treating as list just in case, but user json showed dict.
-            sa105_input = data['SA105']
-            sa105_list = sa105_input if isinstance(
-                sa105_input, list) else [sa105_input]
+            # 3. SA103S (Self-Employment Short)
+            if 'SA103S' in data and data['SA103S'] and generate_sa103s:
+                sa103s_list = data['SA103S'] if isinstance(
+                    data['SA103S'], list) else [data['SA103S']]
 
-            for idx, form_data in enumerate(sa105_list):
-                mapped_sa105 = map_single_form_data(
-                    form_data, [('ukp1', SA105_UKP1), ('ukp2', SA105_UKP2)])
+                for idx, form_data in enumerate(sa103s_list):
+                    mapped_sa103s = map_single_form_data(
+                        form_data, [('ses1', SA103s_SES1), ('ses2', SA103s_SES2)])
 
-                path_sa105 = os.path.join(output_dir, f'sa105_{idx}.pdf')
-                templates_sa105 = os.path.join(
-                    base_dir, 'tax_forms', 'form_definitions', 'sa105', 'templates')
+                    path_sa103s = os.path.join(output_dir, f'sa103s_{idx}.pdf')
+                    templates_sa103s = os.path.join(
+                        base_dir, 'tax_forms', 'form_definitions', 'sa103s', 'templates')
 
-                generated_path = generate_sa105(
-                    mapped_sa105, output_path=path_sa105, templates_dir=templates_sa105)
-                merger.append(generated_path)
-                files_to_clean.append(generated_path)
+                    generated_path = generate_sa103s(
+                        mapped_sa103s, output_path=path_sa103s, templates_dir=templates_sa103s)
+                    merger.append(generated_path)
 
-        # 5. SA110 (Tax Calculation) - Single or List? User JSON shows Object.
-        if 'SA110' in data and data['SA110'] and generate_sa110:
-            sa110_input = data['SA110']
-            sa110_list = sa110_input if isinstance(
-                sa110_input, list) else [sa110_input]
+            # 4. SA105 (UK Property)
+            if 'SA105' in data and data['SA105'] and generate_sa105:
+                sa105_input = data['SA105']
+                sa105_list = sa105_input if isinstance(
+                    sa105_input, list) else [sa105_input]
 
-            for idx, form_data in enumerate(sa110_list):
-                mapped_sa110 = map_single_form_data(
-                    form_data, [('tc1', SA110_TC1), ('tc2', SA110_TC2)])
+                for idx, form_data in enumerate(sa105_list):
+                    mapped_sa105 = map_single_form_data(
+                        form_data, [('ukp1', SA105_UKP1), ('ukp2', SA105_UKP2)])
 
-                path_sa110 = os.path.join(output_dir, f'sa110_{idx}.pdf')
-                templates_sa110 = os.path.join(
-                    base_dir, 'tax_forms', 'form_definitions', 'sa110', 'templates')
+                    path_sa105 = os.path.join(output_dir, f'sa105_{idx}.pdf')
+                    templates_sa105 = os.path.join(
+                        base_dir, 'tax_forms', 'form_definitions', 'sa105', 'templates')
 
-                generated_path = generate_sa110(
-                    mapped_sa110, output_path=path_sa110, templates_dir=templates_sa110)
-                merger.append(generated_path)
-                files_to_clean.append(generated_path)
+                    generated_path = generate_sa105(
+                        mapped_sa105, output_path=path_sa105, templates_dir=templates_sa105)
+                    merger.append(generated_path)
 
-        # Output Final Merged PDF
-        final_output_path = os.path.join(output_dir, 'unified_tax_return.pdf')
-        with open(final_output_path, 'wb') as fout:
-            merger.write(fout)
-        merger.close()
+            # 5. SA110 (Tax Calculation)
+            if 'SA110' in data and data['SA110'] and generate_sa110:
+                sa110_input = data['SA110']
+                sa110_list = sa110_input if isinstance(
+                    sa110_input, list) else [sa110_input]
 
-        # Cleanup intermediate files?
-        # for f in files_to_clean:
-        #     try: os.remove(f)
-        #     except: pass
+                for idx, form_data in enumerate(sa110_list):
+                    mapped_sa110 = map_single_form_data(
+                        form_data, [('tc1', SA110_TC1), ('tc2', SA110_TC2)])
 
-        return FileResponse(open(final_output_path, 'rb'), content_type='application/pdf', as_attachment=True, filename='hmrc_full_return.pdf')
+                    path_sa110 = os.path.join(output_dir, f'sa110_{idx}.pdf')
+                    templates_sa110 = os.path.join(
+                        base_dir, 'tax_forms', 'form_definitions', 'sa110', 'templates')
+
+                    generated_path = generate_sa110(
+                        mapped_sa110, output_path=path_sa110, templates_dir=templates_sa110)
+                    merger.append(generated_path)
+
+            # Write merged PDF to memory buffer
+            buffer = io.BytesIO()
+            merger.write(buffer)
+            merger.close()
+            buffer.seek(0)
+
+            # Temporary directory is cleaned up here when exiting context
+
+        return FileResponse(buffer, content_type='application/pdf', as_attachment=True, filename='hmrc_full_return.pdf')
 
     except Exception as e:
         print(f"Error in unified generation: {e}")
