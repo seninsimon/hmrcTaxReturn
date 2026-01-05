@@ -9,4 +9,6 @@ urlpatterns = [
     path('api/generate/sa103s/', views.generate_sa103s_view, name='generate_sa103s'),
     path('api/generate/sa105/', views.generate_sa105_view, name='generate_sa105'),
     path('api/generate/sa110/', views.generate_sa110_view, name='generate_sa110'),
+    path('api/generate/unified/', views.generate_unified_pdf_view,
+         name='generate_unified'),
 ]
