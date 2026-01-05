@@ -1,222 +1,98 @@
-# HMRC Tax Return PDF Generator
+# HMRC Tax Return Generator (Django)
 
-Django-ready modular backend for generating HMRC tax return PDFs (SA100, SA102, etc.).
+This project is a Django-based application designed to generate HMRC Self Assessment tax return PDFs (SA100, SA102, SA103S, SA105, SA110). It supports filling these forms with data provided via API requests (POST) or by fetching data from an external HMRC data source (GET).
 
-## 📁 Project Structure
+## Features
+
+- **Modular Design:** Each tax form is handled by a dedicated generator module within the `tax_forms` app.
+- **Dynamic Data Fetching:** The SA100 and Unified generators can fetch live data from a specified external API.
+- **Unified PDF Generation:** A single endpoint to generate and merge all applicable forms for a user into one PDF file.
+- **Flexible Input:** Supports both JSON payloads (POST) and automatic data retrieval (GET).
+- **PDF Merging:** Uses `pypdf` to combine multiple form pages and documents.
+
+## Project Structure
 
 ```
 hmrcTaxReturn/
-├── core/                           # Shared utilities
-│   ├── __init__.py
-│   └── pdf_utils.py               # PDF overlay & merge functions
-│
-├── forms/                          # Form modules
-│   ├── __init__.py
-│   ├── sa100/                     # SA100 Self Assessment
-│   │   ├── __init__.py
-│   │   ├── mappings.py           # Field coordinates
-│   │   ├── generator.py          # generate_sa100()
-│   │   ├── test_data.py          # Sample data
-│   │   └── templates/            # PDF templates (sa100_tr1.pdf, etc.)
-│   │
-│   └── sa102/                     # SA102 Employment Income
-│       ├── __init__.py
-│       ├── mappings.py           # Field coordinates (TODO)
-│       ├── generator.py          # generate_sa102()
-│       ├── test_data.py          # Sample data (TODO)
-│       └── templates/            # PDF templates (sa102.pdf)
-│
-├── test_generators.py             # Test script
-└── requirements.txt
+├── manage.py                # Django management script
+├── requirements.txt         # Python dependencies
+├── tax_project/             # Main project configuration
+│   ├── settings.py          # App registration, middleware, etc.
+│   └── urls.py              # Main URL routing
+├── tax_forms/               # Core application logic
+│   ├── views.py             # API Views (Endpoint logic)
+│   ├── urls.py              # App-specific URL routing
+│   ├── core/                # Shared utilities (PDF merging, overlay)
+│   └── form_definitions/    # Definitions for each form type
+│       ├── sa100/           # SA100 Generator, Mappings, Templates
+│       ├── sa102/           # SA102 Generator, Mappings, Templates
+│       ├── sa103s/          # SA103S Generator, Mappings, Templates
+│       ├── sa105/           # SA105 Generator, Mappings, Templates
+│       └── sa110/           # SA110 Generator, Mappings, Templates
+└── media/                   # Output directory for generated PDFs
 ```
 
-## 🚀 Quick Start
+## Prerequisites
 
-### 1. Install Dependencies
+- Python 3.8+
+- pip
 
-```bash
-pip install -r requirements.txt
-```
+## Installation
 
-### 2. Test Generation
+1.  **Clone the repository** (if moving to a new machine).
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    _Dependencies include:_ `django`, `reportlab`, `pypdf`, `requests`, `pillow` (automatically handled by reportlab/django deps usually).
 
-```bash
-python test_generators.py
-```
+## Running the Server
 
-This will generate:
+1.  Start the development server:
+    ```bash
+    python manage.py runserver
+    ```
+2.  The API will be accessible at `http://localhost:8000/`.
 
-- `output/sa100_completed.pdf` - Combined SA100 (all 8 pages)
-- `output/sa102_completed.pdf` - SA102 form (once configured)
+## API Endpoints
 
-## 📝 Usage
+### 1. Unified PDF Generation (Recommended)
 
-### Generate SA100
+Generates a complete tax return containing all forms populated with available data.
 
-```python
-from forms.sa100.generator import generate_sa100
+- **URL:** `/api/generate/unified/`
+- **Method:** `GET`
+- **Behavior:**
+  - Fetches data from the configured external API.
+  - Normalizes data keys (e.g., converts `PRO11_1_0` to `PRO11.1_0`).
+  - Generates PDFs for all present forms (SA100, SA102, SA103S, SA105, SA110).
+  - Merges them into a single file `hmrc_full_return.pdf`.
 
-data = {
-    'tr1': {
-        'utr_number': '1234567890',
-        'nino': 'AB123456C',
-        # ... more fields
-    },
-    'tr2': { ... },
-    'tr3': { ... },
-    # ... up to tr8
-}
+### 2. Individual Form Generation
 
-pdf_path = generate_sa100(data, output_path="sa100_completed.pdf")
-```
+Generate specific forms individually.
 
-### Generate SA102
+- **SA100 (Main Return):** `/api/generate/sa100/`
+  - **GET:** Fetches dynamic data.
+  - **POST:** Accepts JSON body with `tr1`, `tr2`, etc. keys.
+- **Other Forms:**
+  - `/api/generate/sa102/` (Employment)
+  - `/api/generate/sa103s/` (Self-Employment Short)
+  - `/api/generate/sa105/` (UK Property)
+  - `/api/generate/sa110/` (Tax Calculation)
+  - **GET:** Uses default test data located in `test_data.py`.
+  - **POST:** Accepts JSON body.
 
-```python
-from forms.sa102.generator import generate_sa102
+## Configuration
 
-data = {
-    'p1': {
-        'employerName': 'ABC Company Ltd',
-        'payeReference': '123/A456',
-        'payFromEmployment': '50000.00',
-        # ... more fields
-    }
-}
+- **External API URL:** Configured in `tax_forms/views.py` inside `fetch_unified_data()` function.
+  - Current: `http://192.168.1.56:8000/api/hmrc/MTR/generate_Data_for_tax_return/`
+- **Templates:** PDF templates are located in `tax_forms/form_definitions/<form>/templates/`. Ensure these files exist for generation to work correctly.
 
-pdf_path = generate_sa102(data, output_path="sa102_completed.pdf")
-```
+## Development Notes
 
-## 🔧 Setting Up SA102
-
-1. **Add Template**: Place `sa102.pdf` in `forms/sa102/templates/`
-
-2. **Find Coordinates**: Use a PDF coordinate tool to identify field positions
-
-3. **Update `forms/sa102/mappings.py`**:
-
-```python
-SA102_P1 = {
-    'employerName': {'x': 100, 'y': 700, 'type': 'text'},
-    'payeReference': {'x': 100, 'y': 680, 'type': 'text'},
-    # ... add more fields
-}
-```
-
-4. **Update `forms/sa102/test_data.py`**:
-
-```python
-DATA_SA102_P1 = {
-    'employerName': 'ABC Company Ltd',
-    'payeReference': '123/A456',
-    # ... add test values
-}
-```
-
-## 🌐 Django Integration
-
-### Copy to Django Project
-
-```bash
-# Copy this entire folder into your Django project
-cp -r hmrcTaxReturn /path/to/your/django/project/apps/
-```
-
-### Create Django Views
-
-**`views.py`**:
-
-```python
-from django.http import FileResponse
-from django.views.decorators.http import require_http_methods
-import json
-from forms.sa100.generator import generate_sa100
-from forms.sa102.generator import generate_sa102
-
-@require_http_methods(["POST"])
-def generate_sa100_view(request):
-    """Generate SA100 PDF endpoint"""
-    data = json.loads(request.body)
-    pdf_path = generate_sa100(data, output_path=f"media/sa100_{request.user.id}.pdf")
-    return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
-
-@require_http_methods(["POST"])
-def generate_sa102_view(request):
-    """Generate SA102 PDF endpoint"""
-    data = json.loads(request.body)
-    pdf_path = generate_sa102(data, output_path=f"media/sa102_{request.user.id}.pdf")
-    return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
-```
-
-**`urls.py`**:
-
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('api/generate/sa100/', views.generate_sa100_view, name='generate_sa100'),
-    path('api/generate/sa102/', views.generate_sa102_view, name='generate_sa102'),
-]
-```
-
-### Frontend Integration
-
-**React/JavaScript Example**:
-
-```javascript
-async function downloadSA100(userData) {
-  const response = await fetch("/api/generate/sa100/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(userData),
-  });
-
-  const blob = await response.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "sa100_completed.pdf";
-  a.click();
-}
-
-async function downloadSA102(employmentData) {
-  const response = await fetch("/api/generate/sa102/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(employmentData),
-  });
-
-  const blob = await response.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "sa102_completed.pdf";
-  a.click();
-}
-```
-
-## 📦 Adding New Forms (e.g., SA103)
-
-1. Create `forms/sa103/` directory
-2. Add `__init__.py`, `mappings.py`, `generator.py`, `test_data.py`
-3. Add templates to `forms/sa103/templates/`
-4. Create Django view and endpoint
-
-## 🛠️ Field Types
-
-- **`text`**: Single-line text field
-
-```python
-{'x': 100, 'y': 200, 'type': 'text'}
-```
-
-- **`boxed`**: Individual character boxes
-
-```python
-{'x': 100, 'y': 200, 'type': 'boxed', 'box_width': 12, 'spacing': 1}
-```
-
-## 📄 License
-
-Add your license here.
+- **Adding New Forms:**
+  1.  Create a new folder in `tax_forms/form_definitions/`.
+  2.  Add `generator.py`, `mappings.py`, and `templates/`.
+  3.  Register the new generator in `tax_forms/views.py`.
+  4.  Update `generate_unified_pdf_view` to include the new form logic.
