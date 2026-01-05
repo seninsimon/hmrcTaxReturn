@@ -1,18 +1,18 @@
 
 DATA_SA105_UKP1 = {
 
-    "Yourname": "eren yeagert",
+    "Name": "eren yeagert",
 
-    "utr1":"0",
-    "utr2":"0",
-    "utr3":"0",
-    "utr4":"0",
-    "utr5":"0",
-    "utr6":"0",
-    "utr7":"0",
-    "utr8":"0",
-    "utr9":"0",
-    "utr10":"0",
+    "UTR1":"0",
+    "UTR2":"0",
+    "UTR3":"0",
+    "UTR4":"0",
+    "UTR5":"0",
+    "UTR6":"0",
+    "UTR7":"0",
+    "UTR8":"0",
+    "UTR9":"0",
+    "UTR10":"0",
 
 
     "PRO1_0" : "0",
