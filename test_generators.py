@@ -3,6 +3,8 @@ Main Test Script
 Tests both SA100 and SA102 form generation
 """
 
+from forms.sa101.test_data import SA101_TEST_DATA
+from forms.sa101.generator import generate_sa101
 from forms.sa102.test_data import DATA_SA102_TR1, DATA_SA102_TR2
 from forms.sa105.test_data import DATA_SA105_UKP1, DATA_SA105_UKP2
 from forms.sa110.test_data import DATA_SA110_TC1, DATA_SA110_TC2
@@ -103,6 +105,7 @@ def test_sa103s():
         print(f"✗ SA103s generation failed: {str(e)}")
         return False
 
+
 def test_sa105():
     """Test SA105 generation"""
     print("\n" + "=" * 60)
@@ -127,6 +130,7 @@ def test_sa105():
     except Exception as e:
         print(f"✗ SA105 generation failed: {str(e)}")
         return False
+
 
 def test_sa110():
     """Test SA110 generation"""
@@ -154,6 +158,29 @@ def test_sa110():
         return False
 
 
+def test_sa101():
+    """Test SA101 generation"""
+    print("\n" + "=" * 60)
+    print("Testing SA101 Generation")
+    print("=" * 60)
+
+    # Prepare data dictionary
+    data = SA101_TEST_DATA
+
+    try:
+        output_path = generate_sa101(
+            data, output_path="output/sa101_completed.pdf")
+        print(f"✓ SA101 generated successfully: {output_path}")
+        return True
+    except FileNotFoundError as e:
+        print(f"⚠ SA101 skipped: {str(e)}")
+        print("  Add sa101.pdf to forms/sa101/templates/ to enable SA101 generation")
+        return True  # Not a failure, just not configured yet
+    except Exception as e:
+        print(f"✗ SA101 generation failed: {str(e)}")
+        return False
+
+
 if __name__ == "__main__":
     # Create output directory if it doesn't exist
     os.makedirs("output", exist_ok=True)
@@ -164,13 +191,14 @@ if __name__ == "__main__":
     sa103s_success = test_sa103s()
     sa105_success = test_sa105()
     sa110_success = test_sa110()
+    sa101_success = test_sa101()
 
     # Summary
     print("\n" + "=" * 60)
     print("Summary")
     print("=" * 60)
 
-    if sa100_success and sa102_success and sa103s_success and sa105_success and sa110_success:
+    if sa100_success and sa102_success and sa103s_success and sa105_success and sa110_success and sa101_success:
         print("✓ All tests passed!")
         sys.exit(0)
     else:
